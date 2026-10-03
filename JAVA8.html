@@ -1,0 +1,62 @@
+
+<DOCTYPE html>
+<head>
+    <title>Examen</title>
+</head>
+
+<body>
+
+<p>1. ¿Cuál es la capital de Argentina?</p>
+<select id="p1">
+    <option>Buenos Aires</option>
+    <option>Córdoba</option>
+    <option>Rosario</option>
+</select>
+
+<p>2. ¿Cuánto es 2 + 2?</p>
+<select id="p2">
+    <option>4</option>
+    <option>5</option>
+    <option>6</option>
+</select>
+
+<p>3. ¿Cuál es un lenguaje web?</p>
+<select id="p3">
+    <option>HTML</option>
+    <option>Java</option>
+    <option>Python</option>
+</select>
+
+<p>4. ¿Cuál es el planeta rojo?</p>
+<select id="p4">
+    <option>Marte</option>
+    <option>Venus</option>
+    <option>Júpiter</option>
+</select>
+
+<button onclick="corregir()">Corregir</button>
+
+<p id="resultado"></p>
+
+<script>
+
+function corregir() {
+
+    let correctas = 0;
+
+    if (p1.value == "Buenos Aires") correctas++;
+    if (p2.value == "4") correctas++;
+    if (p3.value == "HTML") correctas++;
+    if (p4.value == "Marte") correctas++;
+
+    let incorrectas = 4 - correctas;
+
+    resultado.innerHTML = "Correctas: " + correctas +
+     "<br>Incorrectas: " + incorrectas;
+}
+
+</script>
+
+</body>
+</DOCTYPE html>
+
